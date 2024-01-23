@@ -4,93 +4,193 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="8dp"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="Discount Calculator"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.041" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="6dp"
+        android:text="@string/item_price_label"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/price"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/price"
+        app:layout_constraintVertical_bias="1.0" />
+
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/price"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
+        android:hint="Enter List Price"
         android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/radioGroup"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.096" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="43dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
         android:orientation="horizontal"
+        android:textAlignment="viewStart"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber">
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/price">
 
         <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="match_parent"
+            android:id="@+id/radio10"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10%"
+            android:text="@string/sale_percentage_10"
             android:textSize="20sp" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="match_parent"
+            android:id="@+id/radio15"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="15%"
+            android:text="@string/sale_percentage_15"
             android:textSize="20sp" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
-            android:layout_width="match_parent"
+            android:id="@+id/radio18"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="18%"
+            android:text="@string/sale_percentage_18"
             android:textSize="20sp" />
 
         <RadioButton
-            android:id="@+id/radioButton4"
-            android:layout_width="match_parent"
+            android:id="@+id/radioCustom"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Custom"
-            android:textSize="20sp" />
+            android:text="@string/sale_percentage_custom"
+            android:textSize="18sp" />
     </RadioGroup>
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sale %"
-        android:textSize="20sp"
+        android:text="@string/sale_percentage_label"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/radioGroup"
-        app:layout_constraintEnd_toStartOf="@+id/radioGroup"
-        app:layout_constraintHorizontal_bias="0.136"
-        app:layout_constraintStart_toStartOf="@+id/itemPrice"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/radioGroup" />
 
     <TextView
-        android:id="@+id/itemPrice"
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:text="Item Price:"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextNumber"
-        app:layout_constraintEnd_toStartOf="@+id/editTextNumber"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextNumber" />
+        android:text="@string/seekbar_label"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/seekBar"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/seekBar" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/seekBarPercent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Discount Calculator"
-        android:textSize="34sp"
+        android:layout_marginEnd="16dp"
+        android:text="25%"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/seekBar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintTop_toTopOf="@+id/seekBar" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/seekBarPercent"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/discount_label"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/discount"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/discount" />
+
+    <TextView
+        android:id="@+id/discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/default_decimal"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/final_price_label"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/finalPrice"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/finalPrice" />
+
+    <TextView
+        android:id="@+id/finalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/default_decimal"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/discount" />
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="@+id/calculate_button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/calculate_button"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="88dp"
+        android:text="Calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/finalPrice" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

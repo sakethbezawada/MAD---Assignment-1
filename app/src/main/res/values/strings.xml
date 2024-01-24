@@ -2,12 +2,12 @@
     <string name="app_name">InClass01</string>
     <string name="item_price_label">Item Price:</string>
     <string name="item_price_hint">List Item Price</string>
-    <string name="sale_percentage_label">Sale%:</string>
+    <string name="sale_percentage_label">Sale %:</string>
     <string name="sale_percentage_10">10%</string>
     <string name="sale_percentage_15">15%</string>
     <string name="sale_percentage_18">18%</string>
     <string name="sale_percentage_custom">Custom</string>
-    <string name="seekbar_label">Custom:</string>
+    <string name="seekbar_label">Custom %:</string>
     <string name="discount_label">Discount:</string>
     <string name="final_price_label">Final Price:</string>
     <string name="default_decimal">0.00</string>

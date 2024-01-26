@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         priceInput = findViewById(R.id.price);
         radioGroup = findViewById(R.id.radioGroup);
         radioGroup.check(R.id.radio10);
+        discountPercent = 10;
         seekBar = findViewById(R.id.seekBar);
         seekBarPercent = findViewById(R.id.seekBarPercent);
         seekBar.setProgress(25);
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         radioGroup.setOnCheckedChangeListener((group, checkedId) -> {
             seekBar.setEnabled(false);
+            seekBar.setProgress(25);
             if(checkedId == R.id.radio10){
                 discountPercent = 10;
             } else if (checkedId == R.id.radio15) {
@@ -71,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
             priceInput.setText("");
             discountText.setText("0.00");
             finalPriceText.setText("0.00");
-            discountPercent = 0;
+            discountPercent = 10;
             radioGroup.check(R.id.radio10);
             seekBar.setEnabled(false);
             seekBar.setProgress(25);

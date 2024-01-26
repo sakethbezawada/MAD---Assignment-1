@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">InClass01</string>
+    <string name="title">Discount Calculator</string>
     <string name="item_price_label">Item Price:</string>
     <string name="item_price_hint">List Item Price</string>
     <string name="sale_percentage_label">Sale %:</string>
@@ -11,4 +12,6 @@
     <string name="discount_label">Discount:</string>
     <string name="final_price_label">Final Price:</string>
     <string name="default_decimal">0.00</string>
+    <string name="button_reset">Reset</string>
+    <string name="button_calculate">Calculate</string>
 </resources>
